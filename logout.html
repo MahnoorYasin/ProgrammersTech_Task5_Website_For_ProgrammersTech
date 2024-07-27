@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProgrammersTech - Logout</title>
+</head>
+<body>
+    <p>Logging out...</p>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            console.log('DOM loaded');
+            console.log('Removing login state from localStorage');
+
+            // Clear login state and redirect
+            localStorage.removeItem("isLoggedIn");
+
+            console.log('Redirecting to login.html');
+            window.location.href = "login.html";
+        });
+    </script>
+</body>
+</html>

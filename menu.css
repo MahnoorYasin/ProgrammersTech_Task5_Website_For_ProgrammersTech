@@ -1,0 +1,172 @@
+/* General Styles */
+* {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+    line-height: 1.6;
+    background-color: rgb(194, 232, 245); /* Light grey background for the whole page */
+    color: #333; /* Dark grey text color */
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: rgba(202, 219, 221, 0.9); /* Semi-transparent background */
+}
+
+.navbar .logo {
+    font-size: 30px;
+    font-weight: 600;
+    color: black;
+    text-decoration: none;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li {
+    margin: 0 10px;
+}
+
+.navbar ul li a {
+    color: black;
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar ul li a:hover,
+.navbar ul li a.active {
+    background-color: rgb(49, 44, 44);
+    color: white;
+}
+
+/* Menu Section Styles */
+.menu-section {
+    background-color: rgb(194, 232, 245); /* White background for the menu section */
+    padding: 80px 0; /* Increased padding to account for fixed navbar */
+    margin: 0; /* Remove margin to make the section span full width */
+}
+
+.menu-section .container {
+    padding: 20px;
+}
+
+.menu-section h1 {
+    font-size: 2.5em;
+    font-weight: 500;
+    color: #292727; /* Slightly darker grey */
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.menu-section h2 {
+    font-size: 1.8em;
+    color: #363434; /* Slightly darker grey for sub-headings */
+    margin-top: 40px;
+    margin-bottom: 15px;
+}
+
+.menu-section h3 {
+    font-size: 1.5em;
+    color: orangered; /* Accent color for sub-sub-headings */
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.menu-section p {
+    font-size: 1.1em;
+    color: #252323; /* Darker grey for paragraph text */
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+
+.menu-section ul {
+    list-style: none; /* Remove default list styling */
+    margin: 10px 0 20px 0; /* Remove left margin */
+    padding: 0;
+}
+
+.menu-section ul li {
+    font-size: 1.1em;
+    color: #383636; /* Slightly darker grey for list items */
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.menu-section ul li::before {
+    content: '✓'; /* Add a check mark before each list item */
+    color: #4CAF50; /* Green color for the check mark */
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.menu-section ul li strong {
+    color: #333; /* Black color for strong emphasis */
+}
+
+/* Footer Styles */
+.footer {
+    background-color: rgba(114, 103, 103, 0.9); /* Semi-transparent background */
+    color: #fff;
+    padding: 15px 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    backdrop-filter: blur(5px);
+    display: flex; /* Use flexbox for alignment */
+    justify-content: space-between; /* Space between items */
+    align-items: center; /* Center items vertically */
+    text-align: left; /* Align text to the left */
+}
+
+.footer .footer-text {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.footer .social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0; /* Remove top margin to align icons */
+}
+
+.footer .social-links a {
+    color: #fff; /* White color for social icons */
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+}
+
+.footer .social-links a:hover {
+    color: orangered; /* Hover color for social icons */
+}

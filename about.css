@@ -1,0 +1,164 @@
+/* General Styles */
+* {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#about-header {
+    background-image: url(Images/pic7.png); /* Simple background color */
+    background-size: cover; /* Cover the entire viewport */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    min-height: 100vh; /* Ensure it takes full viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    padding-top: 60px; /* To prevent overlap with navbar */
+    margin: 0; /* Remove default margins */
+}
+
+/* Container */
+.container {
+    flex: 1; /* Take up the remaining space */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+    height: auto; /* Adjust height if needed */
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: rgba(202, 219, 221, 0.9);
+}
+
+.navbar .logo {
+    font-size: 30px;
+    font-weight: 600;
+    color: black;
+    text-decoration: none;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li {
+    margin: 0 10px;
+}
+
+.navbar ul li a {
+    color: black;
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar ul li a:hover,
+.navbar ul li a.active {
+    background-color: rgb(49, 44, 44);
+    color: white;
+}
+
+.about-section {
+    padding: 60px 20px;
+    background-color: transparent; /* Make background transparent */
+    color: #333;
+    text-align: center;
+    margin: 0; /* Remove default margin */
+}
+
+.about-section .about-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-section h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #292727;
+}
+
+.about-section h2 {
+    font-size: 1.8em;
+    margin-top: 30px;
+    color: #363434;
+}
+
+.about-section p {
+    font-size: 1.1em;
+    color: #252323;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.about-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.about-section ul li {
+    font-size: 1.1em;
+    color: #383636;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.about-section ul li::before {
+    content: '✓'; /* Add a check mark before each list item */
+    color: #4CAF50; /* Green color for the check mark */
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.about-section ul li strong {
+    font-weight: 500;
+    color: #333;
+}
+
+.footer {
+    background-color: rgba(114, 103, 103, 0.9); /* Semi-transparent background */
+    color: #fff;
+    padding: 15px 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    backdrop-filter: blur(5px);
+    display: flex; /* Use flexbox for alignment */
+    justify-content: space-between; /* Space between items */
+    align-items: center; /* Center items vertically */
+    text-align: left; /* Align text to the left */
+}
+
+.footer .social-links {
+    margin-top: 0; /* Remove top margin to align icons */
+}
+
+.footer .social-links a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+}
+
+.footer .social-links a:hover {
+    color: orangered; /* Hover color for social icons */
+}
+
+

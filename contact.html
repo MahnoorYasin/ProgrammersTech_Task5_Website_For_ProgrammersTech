@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ProgrammersTech</title>
+    <!-- Link to Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet" />
+    <!-- Link to Font Awesome for social icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <!-- Internal CSS -->
+    <link rel="stylesheet" href="contact.css" />
+</head>
+<body>
+    <div id="contact-header">
+        <div class="container">
+            <!-- Navbar -->
+            <nav class="navbar">
+                <a href="home.html" class="logo">ProgrammersTech</a>
+                <ul>
+                  <li><a href="home.html" class="nav-item" id="home-link" class="hidden">Home</a></li>
+                  <li><a href="about.html" class="nav-item" id="about-link" class="hidden">About</a></li>
+                  <li><a href="menu.html" class="nav-item" id="menu-link" class="hidden">Menu</a></li>
+                  <li><a href="gallery.html" class="nav-item" id="gallery-link" class="hidden">Gallery</a></li>
+                  <li><a href="test&faq.html" class="nav-item" id="test-link" class="hidden">Reviews and Help</a></li>
+                  <li><a href="logout.html" class="nav-item" id="logout-link" class="hidden">Logout</a></li>
+                  <li><a href="contact.html" class="nav-item" id="contact-link" class="hidden">Contact us</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="contact-left">
+                        <h1 class="sub-title">Contact Us</h1>
+                        <p><i class="fas fa-paper-plane"></i> programmerstech.it@gmail.com</p>
+                        <p><i class="fas fa-phone-square-alt"></i>03163600793</p>
+                        <div class="social-icon">
+                            <a href="https://web.facebook.com/profile.php?id=61550105468629"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-twitter-square"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.linkedin.com/company/101610906"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                    <div class="contact-form">
+                      <form id="contactForm">
+                        <p>Your Name <span>*</span></p>
+                        <input type="text" id="contactName" name="name" placeholder="Enter your name" required maxlength="100" class="box" />
+                        <p>Your Email <span>*</span></p>
+                        <input type="email" id="contactEmail" name="email" placeholder="Enter your email" required maxlength="100" class="box" />
+                        <p>Your Message <span>*</span></p>
+                        <textarea id="contactMessage" name="message" placeholder="Enter your message" required maxlength="500" class="box"></textarea>
+                        <input type="submit" value="Send Message" class="btn" /> <!-- Use the 'btn' class here -->
+                        <span id="msg"></span> <!-- Message will be displayed here -->
+                    </form>
+                    </div>
+                </div>
+            </div>
+            <!-- Footer -->
+            <footer class="footer">
+                <div class="footer-text">&copy; 2024 ProgrammersTech</div>
+                <div class="social-links">
+                    <a href="https://web.facebook.com/profile.php?id=61550105468629"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.linkedin.com/company/101610906"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+          const form = document.getElementById('contactForm');
+          const msgElement = document.getElementById('msg');
+      
+          form.addEventListener('submit', function(event) {
+              event.preventDefault(); // Prevent default form submission
+      
+              const formData = new FormData(form);
+      
+              fetch('contact.php', {
+                  method: 'POST',
+                  body: formData
+              })
+              .then(response => response.text()) // Read the response as text
+              .then(data => {
+                  // Display plain text responses directly
+                  msgElement.textContent = data.trim(); // Trim any extra spaces
+                  msgElement.style.color = (data.trim() === 'Message sent successfully!') ? 'green' : 'red'; // Check exact match for success message
+      
+                  if (data.trim() === 'Message sent successfully!') {
+                      form.reset(); // Clear form fields if successful
+                  }
+              })
+              .catch(error => {
+                  console.error('Fetch error:', error);
+                  msgElement.textContent = 'An error occurred. Please try again.';
+                  msgElement.style.color = 'red';
+              });
+          });
+      });
+      </script>
+      
+</body>
+</html>

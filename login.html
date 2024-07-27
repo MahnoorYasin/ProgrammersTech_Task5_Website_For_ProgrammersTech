@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ProgrammersTech</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link rel="stylesheet" href="login.css" />
+</head>
+
+<body>
+    <div id="login-header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="home.html" class="logo">ProgrammersTech</a>
+                <ul>
+                    <li><a href="home.html" class="nav-item" id="home-link">Home</a></li>
+                    <li><a href="signup.html" class="nav-item" id="signup-link">Sign Up</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div id="form-container">
+            <div class="container">
+              <form id="loginForm" action="login.php" method="POST">
+                <h3>Login</h3>
+                <p>Your Email <span>*</span></p>
+                <input type="email" id="loginEmail" name="email" placeholder="Enter your email" required maxlength="50" class="box" />
+                <p>Your Password <span>*</span></p>
+                <input type="password" id="loginPassword" name="pass" placeholder="Enter your password" required maxlength="20" class="box" />
+                <input type="submit" value="Login Now" class="btn" />
+                <span id="loginMessage"></span>
+            </form>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="footer-text">&copy; 2024 ProgrammersTech</div>
+            <div class="social-links">
+              <a href="https://web.facebook.com/profile.php?id=61550105468629"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="https://www.linkedin.com/company/101610906"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </footer> 
+    </div>
+    <!-- JavaScript -->
+    <script src="login.js"></script>
+</body>
+
+</html>
